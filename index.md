@@ -11,6 +11,8 @@ Hi — I'm Justin. Here's where you can find me online:
 
 - [LinkedIn](https://www.linkedin.com/in/justin-whitehouse/)
 - [GitHub](https://github.com/JustinWhitehouse)
-- CV _(coming soon!)_
+- [CV](/cv/)
 
-And here is a link to my old website that I made many years ago (before AI assistants...): [https://www.justinwhitehouse.co.uk/](https://www.justinwhitehouse.co.uk/)
+and here is a link to my old website that I made many years ago (before AI assistants...)
+
+- [https://www.justinwhitehouse.co.uk/](https://www.justinwhitehouse.co.uk/)
