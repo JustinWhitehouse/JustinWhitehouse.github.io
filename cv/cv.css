@@ -1,0 +1,16 @@
+body {
+  font-family: "Helvetica", sans-serif;
+  font-size: 11pt;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  margin-top: 1.2em;
+  margin-bottom: 0.4em;
+}
+
+p, li {
+  margin-bottom: 0.3em;
+}
