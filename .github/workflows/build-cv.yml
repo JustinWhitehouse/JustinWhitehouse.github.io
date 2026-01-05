@@ -27,7 +27,11 @@ jobs:
           pandoc cv/index.md \
             --from markdown \
             --pdf-engine=wkhtmltopdf \
-            --output cv.pdf
+            --output cv.pdf \
+            -V margin-top=10mm \
+            -V margin-bottom=10mm \
+            -V margin-left=12mm \
+            -V margin-right=12mm
 
       - name: Commit PDF back to repository
         run: |
