@@ -1,0 +1,35 @@
+name: Build CV PDF
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "cv/**"
+      - ".github/workflows/build-cv.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
+      - name: Convert CV Markdown to PDF
+        run: |
+          pandoc cv/index.md \
+            --from markdown \
+            --pdf-engine=xelatex \
+            --output cv.pdf
+
+      - name: Commit PDF back to repository
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          mv cv.pdf assets/cv.pdf
+          git add assets/cv.pdf
+          git commit -m "Auto-update CV PDF" || echo "No changes to commit"
+          git push
