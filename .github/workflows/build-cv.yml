@@ -19,11 +19,14 @@ jobs:
       - name: Install Pandoc
         run: sudo apt-get update && sudo apt-get install -y pandoc
 
+      - name: Install wkhtmltopdf
+        run: sudo apt-get update && sudo apt-get install -y wkhtmltopdf
+
       - name: Convert CV Markdown to PDF
         run: |
           pandoc cv/index.md \
             --from markdown \
-            --pdf-engine=xelatex \
+            --pdf-engine=wkhtmltopdf \
             --output cv.pdf
 
       - name: Commit PDF back to repository
