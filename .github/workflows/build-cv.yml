@@ -26,6 +26,7 @@ jobs:
         run: |
           pandoc cv/index.md \
             --from markdown \
+            --css cv/cv.css \
             --pdf-engine=wkhtmltopdf \
             --output cv.pdf \
             -V margin-top=10mm \
